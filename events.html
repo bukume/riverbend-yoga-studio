@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverbend Yoga Studio | Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Riverbend Yoga Studio logo" width="150">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Upcoming Workshops & Events</h1>
+
+        <section>
+            <h2>Workshop Preview</h2>
+            <video controls poster="yoga-workshop.png" width="100%">
+                <source src="yoga-intro.mp4" type="video/mp4">
+                Your browser does not support the video tag. Please <a href="yoga-intro.mp4">download the intro video</a> to preview our workshop.
+            </video>
+        </section>
+
+        <section>
+            <h2>Monthly Workshop List</h2>
+            
+            <!-- Interactive Feature: Workshop Filter -->
+            <div class="filter-container">
+                <label for="workshop-filter">Filter workshops by your experience level:</label>
+                <select id="workshop-filter">
+                    <option value="all">Show All Workshops</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+            <!-- Dynamic List Container -->
+            <ul id="workshop-list">
+                <!-- JavaScript will populate this list -->
+            </ul>
+        </section>
+
+        <section>
+            <h2>Request a Spot</h2>
+            <p>Interested in joining a workshop? Fill out the form below and we will get back to you to confirm your spot.</p>
+            
+            <form id="registration-form" novalidate>
+                <fieldset>
+                    <legend>Workshop Registration Form</legend>
+
+                    <p>
+                        <label for="name">Full Name (required):</label>
+                        <input type="text" id="name" name="name" required>
+                        <span id="name-error" class="error-message"></span>
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address (required):</label>
+                        <input type="email" id="email" name="email" required>
+                        <span id="email-error" class="error-message"></span>
+                    </p>
+
+                    <p>
+                        <label for="interest">Class or Event Interest (required):</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">-- Please select a workshop --</option>
+                            <option value="mindful">Beginner's Mindful Movement</option>
+                            <option value="restorative">Restorative Weekend Reset</option>
+                            <option value="chair">Chair Yoga for Seniors</option>
+                            <option value="vinyasa">Advanced Vinyasa Flow</option>
+                        </select>
+                        <span id="interest-error" class="error-message"></span>
+                    </p>
+
+                    <p>
+                        <label for="experience">Experience Level:</label>
+                        <select id="experience" name="experience">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </p>
+
+                    <fieldset>
+                        <legend>Preferred Contact Method:</legend>
+                        <input type="radio" id="contact-email" name="contact_method" value="email" checked>
+                        <label for="contact-email">Email</label>
+                        
+                        <input type="radio" id="contact-phone" name="contact_method" value="phone">
+                        <label for="contact-phone">Phone</label>
+                    </fieldset>
+
+                    <p>
+                        <label for="message">Message (optional):</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </p>
+
+                    <button type="submit">Request My Spot</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Riverbend Yoga Studio. All rights reserved.</p>
+        <p>123 River Road, Your City | (555) 123-4567</p>
+    </footer>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
